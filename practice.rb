@@ -34,33 +34,36 @@ brian_balance=0
 evann_balance=0
 anthony_balance=0
 
+for transaction in blockchain
 
-  if blockchain[:to_user]=="ben"
-    ben_balance=ben_balance +[:amount]
-  elsif blockchain[:to_user]=="brian"
-    brian_balance=brian_balance+[:amount]
-  elsif blockchain[:to_user]=="evan"
-    evan_balance=evan_balance+[:amount]
-  else blockchain[:to_user]=="anthony"
-    anthony_balance=anthony_balance+[:amount]
+for each in blockchain
+  if each[:to_user]=="ben"
+    ben_balance=ben_balance +each[:amount]
+  elsif each[:to_user]=="brian"
+    brian_balance=brian_balance+each[:amount]
+  elsif each[:to_user]=="evan"
+    evan_balance=evan_balance+each[:amount]
+  else each[:to_user]=="anthony"
+    anthony_balance=anthony_balance+each[:amount]
   end 
 
 
 
-    if blockchain[:from_user]=="ben"
-      ben_balance=ben_balance -[:amount]
-    elsif blockchain[:from_user]=="brian"
-      brian_balance=brian_balance-[:amount]
-    elsif blockchain[:from_user]=="evan"
-      evan_balance=evan_balance-[:amount]
-    elsif blockchain[:from_user]=="anthony"
-      anthony_balance=anthony_balance-[:amount]
-    else
-    end
+  if each[:from_user]=="ben"
+    ben_balance=ben_balance -each[:amount]
+  elsif each[:from_user]=="brian"
+    brian_balance=brian_balance-each[:amount]
+  elsif each[:from_user]=="evan"
+    evan_balance=evan_balance-each[:amount]
+  elsif each[:from_user]=="anthony"
+    anthony_balance=anthony_balance-each[:amount]
+  
+  end
+end
  
 
 
-"Ben's KelloggCoin balance is #{ben_balance}"
-"Brian's KelloggCoin balance is #{brian_balance} "
-"Evan's KelloggCoin balance is #{evan_balance} "
-"Anthony's KelloggCoin balance is #{anthony_balance} "
+puts "Ben's KelloggCoin balance is #{ben_balance}"
+puts "Brian's KelloggCoin balance is #{brian_balance} "
+puts "Evan's KelloggCoin balance is #{evan_balance} "
+puts "Anthony's KelloggCoin balance is #{anthony_balance} "
