@@ -27,3 +27,40 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+
+#Creating the variables to store the balance, which will later be called in the statements
+ben_balance=0
+brian_balance=0
+evann_balance=0
+anthony_balance=0
+
+
+  if blockchain[:to_user]=="ben"
+    ben_balance=ben_balance +[:amount]
+  elsif blockchain[:to_user]=="brian"
+    brian_balance=brian_balance+[:amount]
+  elsif blockchain[:to_user]=="evan"
+    evan_balance=evan_balance+[:amount]
+  else blockchain[:to_user]=="anthony"
+    anthony_balance=anthony_balance+[:amount]
+  end 
+
+
+
+    if blockchain[:from_user]=="ben"
+      ben_balance=ben_balance -[:amount]
+    elsif blockchain[:from_user]=="brian"
+      brian_balance=brian_balance-[:amount]
+    elsif blockchain[:from_user]=="evan"
+      evan_balance=evan_balance-[:amount]
+    elsif blockchain[:from_user]=="anthony"
+      anthony_balance=anthony_balance-[:amount]
+    else
+    end
+ 
+
+
+"Ben's KelloggCoin balance is #{ben_balance}"
+"Brian's KelloggCoin balance is #{brian_balance} "
+"Evan's KelloggCoin balance is #{evan_balance} "
+"Anthony's KelloggCoin balance is #{anthony_balance} "
